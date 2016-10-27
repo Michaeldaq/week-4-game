@@ -1,17 +1,5 @@
-
-
 $(document).ready(function(){
-	//function for wining or losing the game
-	function winLoss(){
-		if (Mainscore === randomNum){
-				alert("you win")
-			} else if (Mainscore > randomNum){
-				alert("you lose")
-			} else {
-				// do nothing
-			}
-	}
-	var Mainscore = 0;
+	var score = 0;
 	//Selecting and placing Random Number for .randomNumber in html.
 	var min = 19;
 	var max = 120;
@@ -35,24 +23,10 @@ $(document).ready(function(){
 
 		//click function for buttons
 		$(".greenbtn").click(function(){
-			Mainscore = Mainscore + greenVal;
-			$(".score").text("Score: " + Mainscore);
-			winLoss();
-		});
-		$(".bluebtn").click(function(){
-		 Mainscore = Mainscore + blueVal;
-			$(".score").text("Score: " + Mainscore);
-			winLoss();
-		});
-		$(".redbtn").click(function(){
-			Mainscore = Mainscore + redVal;
-			$(".score").text("Score: " + Mainscore);
-			winLoss();
-		});
+			score = greenVal;
+			score = score + greenVal;
+			$(".score").html("Score: " + score);
 
-		$(".yellowbtn").click(function(){
-			Mainscore = Mainscore + yellowVal;
-			$(".score").text("Score: " + Mainscore);
-			winLoss();
-		});
+		})
+
 });
